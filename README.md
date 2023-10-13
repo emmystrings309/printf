@@ -178,4 +178,7 @@ Ensure that all the above options work well together.
 12. "The flood of print has turned reading into a process of gulping rather than savoring." - **Warren Chappell**
 13. "All the above options work well together." - **Anonymous**
 
-Feel free to use and modify this `README.md` template as needed for your project.
+
+## Copyright
+
+&copy; 2023 Okikijesu Emmanuel . All rights reserved. This project is licensed under the [License Name](link-to-license).
