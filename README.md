@@ -32,6 +32,56 @@ Write the output to the standard output stream (`stdout`).
 Handle the following conversion specifiers:
 - `%d`
 - `%i`
+#### Flowchart
++---------------------+
+| Start               |
++---------------------+
+          |
+          v
++---------------------+
+| Parse Format String |
++---------------------+
+          |
+          v
++---------------------+
+| Loop through format |
+|      characters     |
++---------------------+
+          |
+          v
++---------------------+
+|   Check for '%'     |
++---------------------+
+          |
+          v
++---------------------+
+| Handle Specifiers   |
++---------------------+
+          |
+          v
++---------------------+
+|   Print Character   |
++---------------------+
+          |
+          v
++---------------------+
+|    Continue Loop    |
++---------------------+
+          |
+          v
++---------------------+
+|   End of Format?    |
++---------------------+
+          |
+          v
++---------------------+
+|    Return Count     |
++---------------------+
+          |
+          v
++---------------------+
+|       End           |
++---------------------+
 
 #### Repository
 [printf](https://github.com/emmystrings309/printf)
