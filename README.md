@@ -233,4 +233,4 @@ Ensure that all the above options work well together.
 
 ## Copyright
 
-&copy; 2023 Okikijesu Emmanuel . All rights reserved. This project is licensed under the [License Name](link-to-license).
+&copy; 2023 Okikijesu Emmanuel, Onabanjo Oluwatomiwa . All rights reserved. This project is licensed under the [License Name](link-to-license).
