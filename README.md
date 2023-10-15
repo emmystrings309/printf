@@ -33,6 +33,8 @@ Handle the following conversion specifiers:
 - `%d`
 - `%i`
 #### Flowchart
+
+```
 +---------------------+
 | Start               |
 +---------------------+
@@ -82,7 +84,7 @@ Handle the following conversion specifiers:
 +---------------------+
 |       End           |
 +---------------------+
-
+```
 #### Repository
 [printf](https://github.com/emmystrings309/printf)
 
