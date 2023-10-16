@@ -6,6 +6,7 @@ int _printf(const char *format, ...) {
     va_list args;
     va_start(args, format);
     int ch_printed = 0;
+    int num, num_digits, temp, digit;
 
     for (int i = 0; format[i] != '\0'; i++) {
         if (format[i] != '%') {
@@ -17,11 +18,11 @@ int _printf(const char *format, ...) {
 
             if (format[i] == 'd') {
                 // Retrieve integer argument
-                int num = va_arg(args, int);
+                num = va_arg(args, int);
 
                 // Print each digit individually
-                int temp = num;
-                int num_digits = 0;
+                temp = num;
+                num_digits = 0;
 
                 // Count the number of digits in the number
                 while (temp != 0) {
@@ -31,11 +32,26 @@ int _printf(const char *format, ...) {
 
                 // Extract each digit and print it
                 for (int j = num_digits - 1; j >= 0; j--) {
-                    int digit = (num / power(10, j)) % 10;
+                    digit = (num / power(10, j)) % 10;
                     _putchar('0' + digit);  // Convert the digit to character and print
                     ch_printed++;
                 }
             }
+           if (format[i] == 's'/* condition */)
+           {
+            /* code */
+            const char *str = va_arg(args, const char *);
+
+            while (*str != '\0')
+            {
+                /* code */
+                _putchar(*str);
+                str++;
+                ch_printed++;
+            }
+            
+           }
+            
             // Add other format specifiers (e.g., %s, %c) as needed
         }
     }
