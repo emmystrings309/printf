@@ -14,7 +14,7 @@ if (format[i] != '%')
 {
 _putchar(format[i]);
 ch_printed++;
-i}
+}
 else
 {
 /* Handle format specifier */
