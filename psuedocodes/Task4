@@ -1,0 +1,29 @@
+function _printf(const char *format, ...)
+    va_list args
+    va_start(args, format)
+
+    num_characters_printed = 0
+
+    char buffer[1024]  // Create a local buffer with a size of 1024 characters
+    buffer_index = 0  // Initialize the buffer index
+
+    for each character, c, in format
+        if c is not '%'
+            buffer[buffer_index] = c
+            buffer_index += 1
+            num_characters_printed += 1
+            if buffer_index is 1024
+                write(buffer, buffer_index)  // Flush the buffer to stdout
+                buffer_index = 0
+        else
+            c = next character
+            // Handle format specifiers and buffer them as necessary, similar to the previous pseudocode
+
+    if buffer_index > 0
+        write(buffer, buffer_index)  // Flush any remaining characters in the buffer to stdout
+
+    va_end(args)
+    return num_characters_printed
+
+# Example usage
+_printf("Decimal: %d, Octal: %o, Lower Hex: %x, Upper Hex: %X, Unsigned: %u", 42, 42, 42, 42, 42)
