@@ -51,6 +51,14 @@ int _printf(const char *format, ...) {
             }
             
            }
+           
+           if (format[i] == 'c'/* condition */)
+           {
+            /* code */
+            char cha = va_arg(args, int);
+            _putchar(cha);
+            ch_printed++;
+           }
             
             // Add other format specifiers (e.g., %s, %c) as needed
         }
