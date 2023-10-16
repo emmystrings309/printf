@@ -16,10 +16,16 @@ int _printf(const char *format, ...) {
             // Handle format specifier
             i++; // Move to the next character after '%'
 
-            if (format[i] == 'd') {
+            if (format[i] == 'd' || format[i] == 'i') {
                 // Retrieve integer argument
                 num = va_arg(args, int);
-
+                if (num < 0/* condition */)
+                {
+                    /* code */
+                    _putchar('-');
+                    num = ABS(num);
+                }
+                
                 // Print each digit individually
                 temp = num;
                 num_digits = 0;
@@ -56,7 +62,7 @@ int _printf(const char *format, ...) {
            {
             /* code */
             char cha = va_arg(args, int);
-            _putchar(cha);
+            _putchar((char)cha);
             ch_printed++;
            }
             
