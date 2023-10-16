@@ -1,0 +1,60 @@
+function _printf(const char *format, ...)
+    va_list args
+    va_start(args, format)
+
+    num_characters_printed = 0
+
+    for each character, c, in format
+        if c is not '%'
+            print c to stdout
+            num_characters_printed += 1
+        else
+            c = next character
+            if c is 'c'
+                // Fetch the character argument using va_arg
+                char arg = va_arg(args, int)
+                print arg to stdout
+                num_characters_printed += 1
+            else if c is 's'
+                // Fetch the string argument using va_arg
+                char* arg = va_arg(args, char*)
+                print arg to stdout
+                num_characters_printed += length of arg
+            else if c is 'd' or c is 'i'
+                // Fetch the integer argument using va_arg
+                int arg = va_arg(args, int)
+                print arg to stdout
+                num_characters_printed += number of digits in arg
+            else if c is 'u'
+                // Fetch the unsigned integer argument using va_arg
+                unsigned int arg = va_arg(args, unsigned int)
+                print arg to stdout
+                num_characters_printed += number of digits in arg
+            else if c is 'o'
+                // Fetch the octal argument using va_arg
+                unsigned int arg = va_arg(args, unsigned int)
+                print arg in octal format to stdout
+                num_characters_printed += number of octal digits in arg
+            else if c is 'x'
+                // Fetch the lowercase hexadecimal argument using va_arg
+                unsigned int arg = va_arg(args, unsigned int)
+                print arg in lowercase hexadecimal format to stdout
+                num_characters_printed += number of hexadecimal digits in arg
+            else if c is 'X'
+                // Fetch the uppercase hexadecimal argument using va_arg
+                unsigned int arg = va_arg(args, unsigned int)
+                print arg in uppercase hexadecimal format to stdout
+                num_characters_printed += number of hexadecimal digits in arg
+            else if c is '%'
+                print '%' to stdout
+                num_characters_printed += 1
+            else
+                // Invalid format specifier, print '%' followed by the character
+                print '%', c to stdout
+                num_characters_printed += 2
+
+    va_end(args)
+    return num_characters_printed
+
+# Example usage
+_printf("Decimal: %d, Octal: %o, Lower Hex: %x, Upper Hex: %X, Unsigned: %u", 42, 42, 42, 42, 42)
