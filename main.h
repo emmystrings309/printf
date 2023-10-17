@@ -9,5 +9,6 @@ int _putchar(char c);
 int check_int(va_list args, int ch_printed);
 int check_str(va_list args, int ch_printed);
 int check_char(va_list args, int ch_printed);
+int format_specifier(int ch_printed, va_list args, const char *format, int i);
 
 #endif /* MAIN_H */

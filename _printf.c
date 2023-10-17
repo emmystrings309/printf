@@ -35,9 +35,9 @@ for (i = 0; format[i] != '\0'; i++)
 		{
 			ch_printed = check_str(args, ch_printed);
 		}
-		if (format[i] != 's' && format[i] != 'd')
+		if (format[i] != 'd' && format[i] != 's' && format[i] != 'i')
 		{
-			ch_printed = format_specifier(ch_printed, args, &format[i], i);
+			ch_printed = format_specifier(ch_printed, args, format, i);
 		}
 	}
 }
