@@ -2,6 +2,18 @@
 #include "main.h"
 #include "stdarg.h"
 
+/**
+ * check_int - writes the character c to stdout
+ * @temp: Temporary var to store int num
+ * @num: Number to be printed
+ * @num_digits: Keep track of the number of digits 
+ * @j: used with the for loop to Extract each digit
+ * @digit: The digit to be printed
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+
 int check_int(va_list args, int ch_printed)
 {
 int temp, digit, num_digits, j, num;
