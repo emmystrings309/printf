@@ -4,7 +4,7 @@
 
 int _printf(const char *format, ...)
 {
-int ch_printed, num, num_digits, temp, digit, i, j;
+int ch_printed, i;
 va_list args;
 va_start(args, format);
 ch_printed = 0;
