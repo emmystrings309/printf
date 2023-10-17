@@ -10,7 +10,12 @@ int format_specifier(int ch_printed, va_list args, const char *format, int i)
                 unsigned int num = va_arg(args, unsigned int);
                 int binary[32]; /*Assuming 32-bit integers */
                 int i = 0;
-
+        case 'c':
+            {
+                char character = va_arg(args, int);
+                _putchar(character);
+                ch_printed++;
+            }
                 /* Calculate binary representation */
                 do {
                     binary[i] = num % 2;
