@@ -31,6 +31,10 @@ if (format[i] == 'c')
 {
 ch_printed = check_char(args, ch_printed);
 }
+if (format[i] != 'd' && format[i] != 's' && format[i] != 'c')
+{
+ch_printed = format_specifier(ch_printed, args, format[i]);
+}
 }
 }
 va_end(args);
