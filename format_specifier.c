@@ -4,4 +4,5 @@
 
 int format_specifier(int ch_printed, va_list args, format[i])
 {
-
+return 0;
+}
