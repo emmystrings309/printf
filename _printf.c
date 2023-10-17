@@ -23,14 +23,12 @@ if (format[i] == 'd' || format[i] == 'i')
 {
 ch_printed = check_int(args, ch_printed);
 }
-if (format[i] == 's' /* condition */)
+if (format[i] == 's')
 {
-/*code*/
 ch_printed = check_str(args, ch_printed);
 }
-if (format[i] == 'c' /* condition */)
+if (format[i] == 'c')
 {
-/* code */
 ch_printed = check_char(args, ch_printed);
 }
 }
