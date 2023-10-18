@@ -51,3 +51,4 @@ function _printf(const char *format, ...)
 
     va_end(args)
     return num_characters_printed
+>>>>>>> 724c019f8e39b6d9eedb83f97e396d96a23fc367
